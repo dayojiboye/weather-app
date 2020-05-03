@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Weather App</title>
+    <link rel="stylesheet" href="assets/styles/main.css" />
+    <script src="https://unpkg.com/axios/dist/axios.min.js" defer></script>
+    <script src="assets/scripts/app.js" defer></script>
+  </head>
+  <body>
+    <header>
+      <h1>WEATHER APP</h1>
+    </header>
+
+    <main>
+      <div id="weather-input">
+        <div class="input-group">
+          <input type="text" id="city" placeholder="Enter a city" />
+          <small class="error-text"></small>
+        </div>
+
+        <button>SUBMIT</button>
+      </div>
+
+      <div id="weather">
+        <p class="city-name"></p>
+        <p class="weather-temp"></p>
+        <figure>
+          <img src="" alt="weather icon" class="weather-icon" />
+          <figcaption></figcaption>
+        </figure>
+      </div>
+    </main>
+  </body>
+</html>

@@ -1,0 +1,164 @@
+* {
+  box-sizing: border-box;
+}
+
+@font-face {
+  font-family: sf-regular;
+  src: url(../fonts/SF-UI-Display-Regular.otf);
+}
+
+html {
+  font-family: sf-regular;
+  -webkit-text-size-adjust: 100%;
+  text-size-adjust: 100%;
+}
+
+body {
+  margin: 0;
+  background: rgb(59, 6, 109);
+}
+
+header {
+  width: 100%;
+  padding: 1rem;
+}
+
+h1 {
+  margin: 0;
+  text-align: center;
+  color: white;
+  letter-spacing: 2px;
+}
+
+main {
+  width: 100%;
+  padding: 3rem 0;
+}
+
+#weather-input {
+  display: -webkit-flex;
+  display: flex;
+  justify-content: center;
+  align-items: baseline;
+  margin-bottom: 3rem;
+}
+
+.input-group {
+  margin-right: 1rem;
+}
+
+input[type='text'] {
+  width: 18.75rem;
+  padding: 0.5rem 3rem;
+  background: url('../icons/icons8-location-25.png'), white;
+  background-repeat: no-repeat;
+  background-position: 10px 6px;
+  border: 1px solid #ccc;
+  font-size: 1rem;
+  font-family: inherit;
+  outline: none;
+}
+
+.error-text {
+  color: red;
+  display: block;
+  margin: 1rem 0;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+button {
+  padding: 0.5rem;
+  background: red;
+  border: 1px solid red;
+  color: white;
+  font-size: 1rem;
+  font-family: inherit;
+  font-weight: bold;
+  letter-spacing: 2px;
+  outline: none;
+  cursor: pointer;
+  transition: 0.7s;
+}
+
+button:hover {
+  background: rgb(138, 9, 9);
+  border: 1px solid rgb(138, 9, 9);
+}
+
+#weather {
+  width: 21.875rem;
+  max-width: 80%;
+  background: white;
+  border-radius: 10px;
+  margin: auto;
+  padding: 2rem;
+  line-height: 1.7;
+  display: none;
+}
+
+#weather.visible {
+  display: block;
+}
+
+.city-name {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin: 0;
+}
+
+.country {
+  margin-left: 0.5rem;
+  padding: 0 0.2rem;
+}
+
+.weather-temp {
+  font-size: 3rem;
+  font-weight: bold;
+  margin: 0;
+}
+
+.degree {
+  font-size: 1.5rem;
+  margin-left: 0.5rem;
+}
+
+figure {
+  margin: 0;
+}
+
+figure img {
+  object-fit: cover;
+}
+
+figcaption {
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+@media only screen and (max-width: 800px) {
+  #weather-input {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .input-group {
+    margin-right: 0;
+    width: 100%;
+  }
+
+  input[type='text'] {
+    width: 70%;
+    display: block;
+    margin: auto;
+    background-position: 10px 14px;
+    padding: 1rem 3rem;
+  }
+
+  button {
+    width: 70%;
+    padding: 1rem;
+    border-radius: 3px;
+  }
+}
